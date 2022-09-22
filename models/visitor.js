@@ -14,7 +14,8 @@ const visitorSchema = new Schema({
     temperature: {type:String, required:true},
     entranceYear: {type:Number, default:undividedDate.getFullYear()}, 
     entranceMonth: {type:Number, default:undividedDate.getMonth()+1},
-    entranceDay: {type:Number, default:undividedDate.getDate()}
+    entranceDay: {type:Number, default:undividedDate.getDate()},
+    pinNumber: {type: String, required: true}
 }, {timestamps: true});
 
 exports.visitorModel = model('visitor', visitorSchema);
