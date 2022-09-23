@@ -2,6 +2,7 @@ const { visitorModel } = require("../models/visitor");
 
 // 완료
 const createVisitorData = (visitorInfo) => {
+    console.log(visitorInfo)
     return new Promise((resolve, reject) => {
         visitorInfo.entranceTime = new Date().toTimeString().split(" ")[0]
         visitorModel.create(visitorInfo)
