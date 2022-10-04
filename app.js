@@ -27,6 +27,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api", apiRouter);
 app.use("/admin", adminRouter);
 
+app.get("/", (req,res) => {
+    res.send(200)
+})
+
 app.listen(port, () => {
     console.log(`Entrylist Server is started at http://localhost:${port}`);
 });
