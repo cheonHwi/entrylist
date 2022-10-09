@@ -29,10 +29,7 @@ app.use("/api", apiRouter);
 app.use("/admin", adminRouter);
 
 app.get("/", (req,res) => {
-    res.status(200).send(new Date())
-    time = new Date().toLocaleString('en-US', {timeZone:'asia/seoul'}).split(" ")
-    result = moment(time[1] + " " + time[2], 'hh:mm:ss A').format('HH:mm:ss')
-    console.log(result)
+    res.status(200).send(" ")
 })
 
 app.listen(port, () => {
