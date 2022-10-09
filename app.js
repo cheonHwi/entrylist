@@ -1,5 +1,6 @@
 const cors = require('cors')
 const dotenv = require("dotenv");
+const moment = require('moment')
 const express = require("express");
 const abRequire = require("abrequire");
 const bodyParser = require("body-parser");
@@ -29,6 +30,9 @@ app.use("/admin", adminRouter);
 
 app.get("/", (req,res) => {
     res.status(200).send(new Date())
+    time = new Date().toLocaleString('en-US', {timeZone:'asia/seoul'}).split(" ")
+    result = moment(time[1] + " " + time[2], 'hh:mm:ss A').format('HH:mm:ss')
+    console.log(result)
 })
 
 app.listen(port, () => {
