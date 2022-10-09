@@ -28,8 +28,7 @@ app.use("/api", apiRouter);
 app.use("/admin", adminRouter);
 
 app.get("/", (req,res) => {
-    res.send(200)
-    console.log(new Date())
+    res.status(200).send(new Date())
 })
 
 app.listen(port, () => {
