@@ -28,13 +28,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api", apiRouter);
 app.use("/admin", adminRouter);
 
-app.get("/", (req,res) => {
-    time = new Date().toLocaleString('en-US', {timeZone:'asia/seoul'}).split(" ")
-    result = moment(time[1] + " " + time[2], 'hh:mm:ss A').format('HH:mm:ss')
-    console.log(result)
-    res.send(result)
-})
-
 app.listen(port, () => {
     console.log(`Entrylist Server is started at http://localhost:${port}`);
 });
