@@ -29,7 +29,7 @@ app.use("/api", apiRouter);
 app.use("/admin", adminRouter);
 
 app.get("/", (req,res) => {
-    res.status(200).send(" ")
+    res.send(new Date().toLocaleString())
 })
 
 app.listen(port, () => {
