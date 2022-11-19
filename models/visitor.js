@@ -1,4 +1,3 @@
-const moment = require('moment')
 const { Schema, model } = require('mongoose');
 
 const time = new Date().toLocaleString('en-US', {timeZone:'asia/seoul'}).split(" ")

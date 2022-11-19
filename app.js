@@ -1,6 +1,5 @@
 const cors = require('cors')
 const dotenv = require("dotenv");
-const moment = require('moment')
 const express = require("express");
 const abRequire = require("abrequire");
 const bodyParser = require("body-parser");
@@ -28,6 +27,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api", apiRouter);
 app.use("/admin", adminRouter);
 
+app.get("/",(req,res) => {
+ time = new Date().toLocaleString('en-US', {timeZone:'asia/seoul'}).split(" ")
+console.log(time)
+})
 app.listen(port, () => {
     console.log(`Entrylist Server is started at http://localhost:${port}`);
 });
