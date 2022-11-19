@@ -29,7 +29,9 @@ app.use("/api", apiRouter);
 app.use("/admin", adminRouter);
 
 app.get("/", (req,res) => {
-    res.send(new Date().toLocaleString())
+    result = moment(time[1] + " " + time[2], 'hh:mm:ss A').format('HH:mm:ss')
+    console.log(result)
+    res.send(result)
 })
 
 app.listen(port, () => {
