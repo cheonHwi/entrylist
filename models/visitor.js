@@ -15,8 +15,8 @@ const visitorSchema = new Schema({
     cardId: {type:String},
     temperature: {type:String, required:true},
     entranceYear: {type:Number, default:date[2]}, 
-    entranceMonth: {type:Number, default:date[1]},
-    entranceDay: {type:Number, default:date[0]},
+    entranceMonth: {type:Number, default:date[0]},
+    entranceDay: {type:Number, default:date[1]},
     pinNumber: {type: String, required: true}
 }, {timestamps: true});
 
