@@ -1,4 +1,3 @@
-const moment = require('moment')
 const { visitorModel } = require("../models/visitor");
 
 
@@ -6,10 +5,6 @@ const { visitorModel } = require("../models/visitor");
 const createVisitorData = (visitorInfo) => {
     console.log(visitorInfo)
     return new Promise((resolve, reject) => {
-        time = new Date().toLocaleString('en-US', {timeZone:'asia/seoul'}).split(" ")
-        result = moment(time[1] + " " + time[2], 'hh:mm:ss A').format('HH:mm:ss')
-        console.log(result)
-        visitorInfo.entranceTime = result
         visitorModel.create(visitorInfo)
         .then(result => {
             if(result !== null)resolve(result.visitorName)
