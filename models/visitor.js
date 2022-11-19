@@ -8,7 +8,7 @@ const visitorSchema = new Schema({
     visitorPhoneNumber : {type: String, required: true},
     visitorDivision : {type: String, required: true},
     visitorReason : {type: String, required: true},
-    entranceTime : {type: String, default:time[1]},
+    entranceTime : {type: String, default:null},
     exitTime : {type: String},
     isEntrance : {type: Boolean},
     cardId: {type:String},
